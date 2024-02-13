@@ -55,15 +55,15 @@ st.set_page_config(layout="wide")
 
 def main():
 
-    st.title("Final Year Project")
+    st.title("Audio Forgery Alert:Uncovering Artificial audio with DeepFake Detection")
     # file uploader
-    uploaded_file = st.file_uploader("upload an audio file ", type=['mp3'])
+    uploaded_file = st.file_uploader("Insert the audio file ", type=['mp3','mp4'])
     if uploaded_file is not None:
-        if st.button("Analyze Audio"):
-            col1, col2 = st.columns(2)
+        if st.button("Check the Audio"):
+            col1, col2  = st.columns(2)
 
             with col1:
-                st.info("your results are below")
+                #st.info("your results are below")
                 # load andclassify the audio file
                 audio_clip = load_audio(uploaded_file)
                 result = classify_audio_clip(audio_clip)
@@ -75,7 +75,7 @@ def main():
             with col2:
                 st.info("Your Uploaded audio is below")
                 st.audio(uploaded_file)
-                '''# create a waveform
+            '''# create a waveform
                 fig = px.line()
                 fig.add_scatter(
                     x=list(range(len(audio_clip.squeeze()))), y=audio_clip.squeeze())
