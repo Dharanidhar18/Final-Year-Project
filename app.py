@@ -4,7 +4,7 @@ from tortoise.models.classifier import AudioMiniEncoderWithClassifierHead
 from glob import glob
 import io
 import librosa
-import plotly.express as px
+#import plotly.express as px
 import torch
 import torch.nn.functional as F
 import torchaudio
@@ -60,7 +60,7 @@ def main():
     uploaded_file = st.file_uploader("upload an audio file ", type=['mp3'])
     if uploaded_file is not None:
         if st.button("Analyze Audio"):
-            col1, col2, col3 = st.columns(3)
+            col1, col2 = st.columns(2)
 
             with col1:
                 st.info("your results are below")
@@ -75,7 +75,7 @@ def main():
             with col2:
                 st.info("Your Uploaded audio is below")
                 st.audio(uploaded_file)
-                # create a waveform
+                '''# create a waveform
                 fig = px.line()
                 fig.add_scatter(
                     x=list(range(len(audio_clip.squeeze()))), y=audio_clip.squeeze())
@@ -89,7 +89,7 @@ def main():
             with col3:
                 st.info("Disclaimer")
                 st.warning(
-                    "These classifcation or detection mechanism are not always accurate.They should be considered as a strong signal and not the ulimate decision makers.")
+                    "These classifcation or detection mechanism are not always accurate.They should be considered as a strong signal and not the ulimate decision makers.")'''
 
 
 if __name__ == '__main__':
