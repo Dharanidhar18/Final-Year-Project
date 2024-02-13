@@ -75,7 +75,7 @@ def main():
             with col2:
                 st.info("Your Uploaded audio is below")
                 st.audio(uploaded_file)
-            '''# create a waveform
+            """# create a waveform
                 fig = px.line()
                 fig.add_scatter(
                     x=list(range(len(audio_clip.squeeze()))), y=audio_clip.squeeze())
@@ -84,12 +84,12 @@ def main():
                     xaxis_title="Time",
                     yaxis_title="Amplitude"
                 )
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, use_container_width=True)"""
 
-            with col3:
+            """with col3:
                 st.info("Disclaimer")
                 st.warning(
-                    "These classifcation or detection mechanism are not always accurate.They should be considered as a strong signal and not the ulimate decision makers.")'''
+                    "These classifcation or detection mechanism are not always accurate.They should be considered as a strong signal and not the ulimate decision makers.")"""
 
 
 if __name__ == '__main__':
