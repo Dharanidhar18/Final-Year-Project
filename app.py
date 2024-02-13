@@ -71,10 +71,9 @@ def main():
                 st.info(f"Result Probability: {result * 100}")
                 st.success(
                     f"The uploaded audio is {result * 100:.2f}% likely to be AI Generated.")
-
-           ## with col2:
-            ##    st.info("Your Uploaded audio is below")
-            ##    st.audio(uploaded_file)
+            with col2:
+                st.info("Your Uploaded audio is below")
+                st.audio(uploaded_file)
             ##    # create a waveform
             ##    fig = px.line()
              #   fig.add_scatter(
